@@ -1,0 +1,12 @@
+﻿################################################################################
+# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
+################################################################################
+
+/.vs
+/DDT.Api/bin
+/DDT.Api/obj
+/DDT.Application/bin
+/DDT.Application/obj
+/DDT.Domain/bin
+/DDT.Domain/obj
+/DDT.Tests/obj

@@ -1,5 +1,7 @@
 ﻿using DDT.Api.Dto;
+using DDT.Application;
 using DDT.Domain;
+using LiteDB;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DDT.Api.Controllers
@@ -11,19 +13,19 @@ namespace DDT.Api.Controllers
         [HttpGet, Route("getall")]
         public ApiResponse GetAll()
         {
-            var cmp = new TasksController();
+            var cmp = new TaskComponent();
             return new ApiResponse
             {
                 Success = true,
-                Object = cmp.GetAll()
+                Object = cmp.GetAllTasks()
             };
         }
 
         [HttpDelete, Route("delete")]
         public ApiResponse DeleteSingle(string id)
         {
-            var cmp = new TasksController();
-            cmp.DeleteSingle(id);
+            var cmp = new TaskComponent();
+            cmp.Delete(new ObjectId(id));
 
             return new ApiResponse
             {
@@ -34,7 +36,7 @@ namespace DDT.Api.Controllers
         [HttpPost, Route("save")]
         public ApiResponse Save([FromBody]Task task)
         {
-            var cmp = new TasksController();
+            var cmp = new TaskComponent();
             cmp.Save(task);
 
             return new ApiResponse
