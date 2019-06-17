@@ -10,3 +10,4 @@
 /DDT.Domain/bin
 /DDT.Domain/obj
 /DDT.Tests/obj
+/DDT.Api/test.db
