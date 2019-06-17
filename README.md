@@ -24,3 +24,6 @@ Im Browser testen: `http://172.26.149.231/api/tasks/getall`
 
 ## Schritt 3: Docker Image pushen  
 VS -> Rechtsklick SLN "DDT.Api" -> Publish -> Container Registration -> Docker-Hub
+
+## Fertiges Ergebnis:
+https://hub.docker.com/r/srcmkr/ddtapi
