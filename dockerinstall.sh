@@ -20,9 +20,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 echo -e "\e[92m*************** Enable docker autostart *********************\e[0m"
-sudo systemctl status docker
+sudo systemctl enable docker
 
 echo -e "\e[92m*************** Init ****************************************\e[0m"
 service docker start
-docker pull appsvc/dotnetcore
-docker run -d -p 80:8080 appsvc/dotnetcore
